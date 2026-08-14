@@ -1,0 +1,581 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap');
+
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: 'Quicksand', 'sans-serif';
+}
+ul{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+}
+.container{
+    
+    max-width: 1100px;
+    margin: auto;
+}
+    /*Utility Classes*/
+    .restaurant-name {
+        color: palevioletred;
+        
+    }
+   
+   /* Header Start */
+   header{
+    height: 100vh;
+    background: url('./Saved Pictures/restaurant.png') center center/cover no-repeat;
+    
+    position: relative;
+   }
+   #navbar{
+    display : flex;
+    justify-content: space-between;
+
+    align-items: center;
+   }
+#navbar img {
+    width: 80px;
+    margin-left: 40px;
+
+}
+ #navbar ul {
+    display : flex;
+    margin-right: 100px;
+   }
+   #navbar ul li a {
+    padding: 15px 20px;
+    color: white;
+    font-weight: 800;
+    font-size: 18px;
+         text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+
+   }
+    #navbar ul li a:hover{
+        border-bottom: 4px solid bisque;
+
+    }
+    header .content{
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+        
+        height: 90% ;
+        padding-left: 120px;
+        padding-top: 100px;
+
+    }
+     header .content h1 {
+         font-size: 40px;
+     }
+      header .content p {
+         margin: 20px 0 40px;
+         font-size: 21px;
+         line-height: 1.7;
+         max-width: 520px;
+         text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+     }
+     header .content h1,
+header .content p {
+    color: whitesmoke;
+}
+.btn {
+    padding: 12px 25px;
+    font-size: 18px;
+    border-radius: 25px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+.primary {
+    background-color: palevioletred;
+    color: white;
+    border: none;
+}
+.btn-secondary{
+    color: white;
+    background: palevioletred;
+    display: inline-block;
+    margin-top: 1rem;
+    clear: both;
+}
+
+.primary:hover {
+    background-color: white;
+    color: palevioletred;
+    border: 2px solid palevioletred;
+}
+.btn-secondary:hover {
+    background-color: white;
+    color: palevioletred;
+    border: 2px solid palevioletred;
+}
+
+header::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.60); 
+    z-index: 1;
+}
+#navbar,
+header .content {
+    position: relative;
+    z-index: 2;
+}
+/*Header End*/
+/*About Start*/
+#about{
+    height: 80vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgb(49, 47, 47);
+}
+#about .title{
+    text-align: center;
+    margin-bottom: 4rem;
+}
+#about h2{
+    font-size: 40px;
+    color: whitesmoke;
+    margin-bottom: 20px;
+}
+#about .title p {
+    font-size: 20px;
+    color: palevioletred;
+    font-weight: 700;
+}
+#about .about-content{
+    display: flex;
+    justify-content: space-between;
+}
+#about .about-content img {
+    width: 500px;
+}
+#about .about-content p{
+    color:palevioletred ;
+    margin-right: 7rem;
+    font-weight: 700;
+    line-height: 1.5;
+}
+/*About End*/
+
+/* Special Offers Section */
+#offers {
+    padding: 80px 10%;
+    background: grey;
+}
+
+#offers .title {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+#offers .title h2 {
+    font-size: 38px;
+    color: #2c3e50;
+    margin-bottom: 10px;
+}
+
+#offers .title p {
+    font-size: 18px;
+    color: pink;
+}
+
+/* Offers Items */
+.offers-items {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+/* Each Card */
+.offers-items > div {
+    background: pink;
+    width: 320px;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    transition: 0.3s;
+    text-align: center;
+    padding-bottom: 20px;
+}
+
+.offers-items > div:hover {
+    transform: translateY(-8px);
+}
+
+/* Images */
+.offers-items img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+}
+
+/* Text */
+.offers-items h3 {
+    font-size: 24px;
+    margin: 15px 0 10px;
+    color: #333;
+}
+
+.offers-items p {
+    font-size: 16px;
+    color: grey;
+    padding: 0 15px;
+    line-height: 1.6;
+}
+
+/* Price */
+.offers-items del {
+    color: black;
+    margin-right: 8px;
+}
+
+.primary-text {
+    color: red;
+    font-size: 20px;
+    font-weight: bold;
+}
+/*Offers Section End */
+/* Menu Section Start */
+#menu{
+    background: gray;
+    padding: 5rem 0;
+
+}
+#menu .title {
+    text-align: center;
+    margin-bottom: 40px;
+}
+#menu .title h2 {
+    font-size: 38px;
+    color: #2c3e50;
+    margin-bottom: 10px;
+}
+#menu .title p {
+    font-size: 18px;
+    color: whitesmoke;
+}
+#menu .price{
+    color: palevioletred;
+}
+#menu .menu-items{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#menu .menu-items .menu-item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 40px;
+}
+
+#menu .menu-items .menu-item img{
+    width: 80px;
+    border-radius: 50%;
+    margin-right: 20px;
+}
+
+#menu .menu-items .menu-item h3{
+    color: black;
+    border-bottom: 1px dashed brown;
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+    position: relative;
+}
+#menu .menu-items .menu-item span{
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+#menu .btn{
+    display: block;
+    margin: 20px auto 0;
+    background: palevioletred;
+    color: aliceblue;
+    cursor: pointer;
+}
+#menu .btn:hover{
+    background: white;
+    color: palevioletred;
+}
+
+/* Menu Section End */
+/*Book a Table*/
+.popup {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.7);
+    justify-content: center;
+    align-items: center;
+    z-index: 999;
+}
+
+.popup-content {
+    background: white;
+    padding: 30px;
+    border-radius: 15px;
+    width: 300px;
+    text-align: center;
+}
+
+.popup-content input {
+    width: 100%;
+    padding: 10px;
+    margin: 8px 0;
+}
+
+.popup-content button {
+    background: palevioletred;
+    color: white;
+    border: none;
+    padding: 10px;
+    width: 100%;
+}
+
+.close {
+    float: right;
+    font-size: 22px;
+    cursor: pointer;
+}
+/*Daytime Section Start*/
+#daytime {
+    background-color: pink;
+    color: gray;
+    text-align: center;
+    padding: 60px 0;
+}
+
+#daytime .container {
+    width: 90%;
+    margin: auto;
+}
+
+#daytime .daytime-items {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    flex-wrap: wrap; 
+}
+
+#daytime .daytime-item {
+    background-color: rgba(255, 255, 255, 0.2);
+    padding: 20px;
+    border-radius: 15px;
+    width: 30%;
+    text-align: center;
+    transition: 0.3s;
+}
+
+#daytime .daytime-item:hover {
+    transform: translateY(-5px);
+    background-color: rgba(255, 255, 255, 0.35);
+}
+
+#daytime .daytime-item img {
+    width: 80px;
+    margin-bottom: 10px;
+}
+
+#daytime .daytime-item h3 {
+    margin: 10px 0;
+    font-size: 22px;
+}
+
+#daytime .daytime-item p {
+    font-size: 14px;
+    opacity: 0.9;
+}
+/*Daytime Section End*/
+/*Gallery Section Start*/
+#gallery {
+    background: url('./Saved Pictures/background.png') center center/cover no-repeat;
+    
+    padding: 60px 0;
+    text-align: center;
+}
+
+#gallery h2 {
+    font-size: 32px;
+    margin-bottom: 30px;
+    color: #333;
+}
+
+#gallery .container {
+    width: 90%;
+    margin: auto;
+}
+
+#gallery .img-gallery {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+#gallery .img-gallery img {
+    width: 300px;
+    height: 220px;
+    object-fit: cover;
+    border-radius: 15px;
+    transition: 0.3s;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+#gallery .img-gallery img:hover {
+    transform: scale(1.05);
+}
+/*Gallery Section End*/
+
+   
+/* Contact Section */
+#contant {
+    background: url('./Saved Pictures/background2.png') center center/cover no-repeat;
+    
+    
+    padding: 100px 0 80px; 
+    margin-top: 80px; 
+}
+
+#contant .container {
+    width: 85%;
+    margin: auto;
+}
+
+.contact-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 50px;
+    flex-wrap: wrap;
+}
+
+
+#contant h2 {
+    text-align: center;
+    font-size: 32px;
+    margin-bottom: 50px;
+    color: #222;
+}
+
+/* Contact info */
+.contact-info {
+    flex: 1;
+}
+
+.contact-info div {
+    margin-bottom: 30px;
+}
+
+.contact-info h3 {
+    font-size: 22px;
+    color: #222;
+    margin-bottom: 15px;
+    font-weight: bold;
+}
+
+.contact-info p {
+    font-size: 16px;
+    color: #555;
+    margin: 10px 0;
+    line-height: 1.8;
+}
+
+.contact-info i {
+    color: #971982;
+    margin-right: 10px;
+    font-size: 18px;
+}
+
+/* Social Icons */
+.contact-info a {
+    display: inline-block;
+    width: 45px;
+    height: 45px;
+    line-height: 45px;
+    text-align: center;
+    border: 2px solid  #971982;
+    border-radius: 50%;
+    color:  #971982;
+    font-size: 20px;
+    margin-right: 12px;
+    transition: 0.3s;
+}
+
+.contact-info a:hover {
+    background:  #971982;
+    color: white;
+    transform: scale(1.1);
+}
+
+/* Form */
+form {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+form input {
+    width: 100%;
+    padding: 15px;
+    margin-bottom: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 16px;
+    outline: none;
+    transition: 0.3s;
+}
+
+form input:focus {
+    border-color:  #971982;
+    box-shadow: 0 0 5px rgba(46, 204, 113, 0.3);
+}
+
+/* Footer */
+#footer {
+    background: #9f9d9d;
+    padding: 25px 0;
+    text-align: center;
+    margin-top: 50px;
+}
+
+#footer p {
+    color: #fff;
+    font-size: 16px;
+    margin: 0;
+    line-height: 1.8;
+}
+
+#footer a {
+    color: red;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+#footer a:hover {
+    color: pink;
+    text-decoration: underline;
+}
+
+#footer b {
+    font-weight: 700;
+}
